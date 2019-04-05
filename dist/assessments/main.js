@@ -96,7 +96,7 @@ var AppModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<!--The content below is only a placeholder and can be replaced.-->\n<div style=\"text-align:center\">\n  <h1>\n    Welcome to {{ title }}!\n  </h1>\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\n</div>\n<h2>Here are some links to help you start: </h2>\n<ul>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\n  </li>\n  <li>\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\n  </li>\n</ul>\n\n<router-outlet></router-outlet>\n"
+module.exports = "<!--The content below is only a placeholder and can be replaced.-->\r\n<div style=\"text-align:center\">\r\n  <h1>\r\n    Welcome to {{ title }}!\r\n  </h1>\r\n  <img width=\"300\" alt=\"Angular Logo\" src=\"data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==\">\r\n</div>\r\n<h2>Here are some links to help you start: </h2>\r\n<ul>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/tutorial\">Tour of Heroes</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://angular.io/cli\">CLI Documentation</a></h2>\r\n  </li>\r\n  <li>\r\n    <h2><a target=\"_blank\" rel=\"noopener\" href=\"https://blog.angular.io/\">Angular blog</a></h2>\r\n  </li>\r\n</ul>\r\n\r\n<router-outlet></router-outlet>\r\n"
 
 /***/ }),
 
@@ -163,7 +163,7 @@ var AppComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  condition-of-vehicle works!\n</p>\n"
+module.exports = "<p>\r\n  condition-of-vehicle works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -219,7 +219,7 @@ var ConditionOfVehicleComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  login works!\n</p>\n"
+module.exports = "<p>\r\n  login works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -275,7 +275,7 @@ var LoginComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<form>\n  <div class=\"form-group\">\n    <label for=\"Insurance\">Insurance</label>\n    <input id=\"Insurance\" type=\"text\" class=\"form-control\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"Client\">Client</label>\n    <input id=\"Client\" type=\"text\" class=\"form-control\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"Claim\">Claim / Policy No</label>\n    <input id=\"Claim\" type=\"text\" class=\"form-control\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"Vehicle\">Vehicle</label>\n    <input id=\"Vehicle\" type=\"text\" class=\"form-control\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"Date\">Date Inspected</label>\n    <input id=\"Date\" type=\"datetime\" class=\"form-control\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"Engine\">Engine No</label>\n    <input id=\"Engine\" type=\"text\" class=\"form-control\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"Chassis\">Chassis No</label>\n    <input id=\"Chassis\" type=\"text\" class=\"form-control\" />\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"Registration\">Registration No</label>\n    <input id=\"Registration\" type=\"text\" class=\"form-control\" />\n  </div>\n</form>\n"
+module.exports = "<form>\r\n  <div class=\"form-group\">\r\n    <label for=\"Insurance\">Insurance</label>\r\n    <input id=\"Insurance\" type=\"text\" class=\"form-control\" />\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"Client\">Client</label>\r\n    <input id=\"Client\" type=\"text\" class=\"form-control\" />\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"Claim\">Claim / Policy No</label>\r\n    <input id=\"Claim\" type=\"text\" class=\"form-control\" />\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"Vehicle\">Vehicle</label>\r\n    <input id=\"Vehicle\" type=\"text\" class=\"form-control\" />\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"Date\">Date Inspected</label>\r\n    <input id=\"Date\" type=\"datetime\" class=\"form-control\" />\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"Engine\">Engine No</label>\r\n    <input id=\"Engine\" type=\"text\" class=\"form-control\" />\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"Chassis\">Chassis No</label>\r\n    <input id=\"Chassis\" type=\"text\" class=\"form-control\" />\r\n  </div>\r\n\r\n  <div class=\"form-group\">\r\n    <label for=\"Registration\">Registration No</label>\r\n    <input id=\"Registration\" type=\"text\" class=\"form-control\" />\r\n  </div>\r\n</form>\r\n"
 
 /***/ }),
 
@@ -334,7 +334,7 @@ var MotorAssessorReportComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  remarks works!\n</p>\n"
+module.exports = "<p>\r\n  remarks works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -390,7 +390,7 @@ var RemarksComponent = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-module.exports = "<p>\n  repairable works!\n</p>\n"
+module.exports = "<p>\r\n  repairable works!\r\n</p>\r\n"
 
 /***/ }),
 
@@ -553,7 +553,7 @@ var AppRoutingModule = /** @class */ (function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! D:\prvt_src\assessments\src\main.ts */"./src/main.ts");
+module.exports = __webpack_require__(/*! D:\Source\Private\assessments\src\main.ts */"./src/main.ts");
 
 
 /***/ })
