@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MotorAssessorReport } from 'src/models/motorAssessorReport';
+import { FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-motor-assessor-report',
@@ -8,7 +9,7 @@ import { MotorAssessorReport } from 'src/models/motorAssessorReport';
 })
 export class MotorAssessorReportComponent implements OnInit {
 
-  public motorAssessorReport: MotorAssessorReport = new MotorAssessorReport();
+  @Input() motorAssessorReportFB: FormBuilder;
 
   constructor() { }
 
