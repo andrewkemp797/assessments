@@ -8,6 +8,7 @@ import { SwUpdate } from '@angular/service-worker';
 })
 export class AppComponent {
   title = 'assessments';
+  valueCollection = ["Good", "Poor", "Write-Off"];
 
   constructor(private swUpdate: SwUpdate) {
 

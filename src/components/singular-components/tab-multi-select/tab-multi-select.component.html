@@ -1,0 +1,8 @@
+<div class="form-control">
+  <label>{{labelText}}</label>
+  <div class="btn-group-horizontal btn-group-toggle" data-toggle="buttons">
+    <label class="btn btn-secondary active" *ngFor="let value of valueCollection">
+      <input type="radio" id="value" autocomplete="off" formControlName="formControlNameReference"> {{value}}
+    </label>
+  </div>
+</div>
