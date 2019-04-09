@@ -3,7 +3,7 @@ import { MotorAssessorReport } from 'src/models/motorAssessorReport';
 import { FormBuilder } from '@angular/forms';
 
 @Component({
-  selector: 'app-motor-assessor-report',
+  selector: 'motor-assessor-report',
   templateUrl: './motor-assessor-report.component.html',
   styleUrls: ['./motor-assessor-report.component.scss']
 })

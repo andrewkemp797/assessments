@@ -16,7 +16,7 @@ export class VehicleCondition {
     public Spotlights: boolean;
     public Towbar: boolean;
     public RunningBoards: boolean;
-    public Radio: boolean;
+    public Radio: string;
     public Speakers: number;
     public CentralLocking: boolean;
     public Immobiliser: boolean;

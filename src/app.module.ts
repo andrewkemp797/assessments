@@ -12,7 +12,7 @@ import { MotorAssessorReportComponent } from './components/motor-assessor-report
 import { ConditionOfVehicleComponent } from './components/condition-of-vehicle/condition-of-vehicle.component';
 import { RepairableComponent } from './components/repairable/repairable.component';
 import { RemarksComponent } from './components/remarks/remarks.component';
-import { CustomMultiselectComponent } from './components/singular-components/custom-multiselect/custom-multiselect.component';
+import { TabMultiSelectComponent } from './components/singular-components/tab-multi-select/tab-multi-select.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +22,7 @@ import { CustomMultiselectComponent } from './components/singular-components/cus
     ConditionOfVehicleComponent,
     RepairableComponent,
     RemarksComponent,
-    CustomMultiselectComponent
+    TabMultiSelectComponent
   ],
   imports: [
     BrowserModule,

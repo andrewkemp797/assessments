@@ -1,3 +1,6 @@
-<p>
-  remarks works!
-</p>
+<form [formGroup]="remarksFormGroup">
+  <div class="form-group">
+    <label for="remarks">Remarks</label>
+    <input type="text" class="form-control" id="remarks" formControlName="remarks" />
+  </div>
+</form>
