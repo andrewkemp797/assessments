@@ -1,11 +1,11 @@
-<form [formGroup]="formGroupReference">
+<div [formGroup]="formGroupReference">
   <div class="form-group">
     <label>{{labelText}}</label>
     <div class="btn-group-horizontal btn-group-toggle" data-toggle="buttons">
       <label class="btn btn-secondary active" *ngFor="let value of valueCollection">
-        <input type="radio" id="value" autocomplete="off" formControlName="formControlNameReference"
+        <input type="radio" id="value" [value]="value" autocomplete="off" [formControlName]="formControlNameReferenceName"
           class="form-control"> {{value}}
       </label>
     </div>
   </div>
-</form>
+</div>

@@ -1,19 +1,23 @@
-<form [formGroup]="assessmentDetails">
-    <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
+<h1>Assessment Capture</h1>
+
+<form [formGroup]="assessmentDetails" (ngSubmit)="submitAssessment()">
+    <ngb-accordion #acc="ngbAccordion">
         <ngb-panel title="Motor Assessor Report">
             <ng-template ngbPanelContent>
-                <motor-assessor-report [motorAssessorReportFB]="assessmentDetails.controls['motorAssessorReport']"></motor-assessor-report>
+                <motor-assessor-report [motorAssessorReportFB]="assessmentDetails.get('motorAssessorReport')"></motor-assessor-report>
             </ng-template>
         </ngb-panel>
         <ngb-panel title="Condition Of Vehicle">
             <ng-template ngbPanelContent>
-                <condition-of-vehicle [conditionFormGroup]="assessmentDetails.controls['vehicleCondition']"></condition-of-vehicle>
+                <condition-of-vehicle [conditionFormGroup]="assessmentDetails.get('vehicleCondition')"></condition-of-vehicle>
             </ng-template>
         </ngb-panel>
         <ngb-panel title="Remarks">
             <ng-template ngbPanelContent>
-                <remarks [remarksFormGroup]="assessmentDetails.controls['remarks']"></remarks>
+                <remarks [remarksFormGroup]="assessmentDetails.get('remarks')"></remarks>
             </ng-template>
         </ngb-panel>
     </ngb-accordion>
+
+    <button type="submit" class="btn btn-primary float-right">Submit</button>
 </form>

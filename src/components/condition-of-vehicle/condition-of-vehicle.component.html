@@ -1,31 +1,52 @@
-<form [formGroup]="conditionFormGroup">
+<div [formGroup]="conditionFormGroup">
     <div class="form-group">
         <label for="Odometer">Odometer</label>
-        <input type="number" id="Odometer" class="form-control" formControlName="Odometer" /> 
+        <input type="number" id="Odometer" class="form-control" formControlName="Odometer" />
     </div>
-    <tab-multi-select [labelText]="'Steering'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Steering'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Footbrake'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Footbrake'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Handbrake'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Handbrake'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Bodywork'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Bodywork'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Windscreen'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Windscreen'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Chassis'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Chassis'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Interior'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Interior'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'PaintCondition'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'GeneralCondition'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'GeneralCondition'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Steering'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Steering'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Footbrake'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Footbrake'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Handbrake'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Handbrake'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Bodywork'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Bodywork'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Windscreen'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Windscreen'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Chassis'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Chassis'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Interior'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Interior'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'PaintCondition'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'GeneralCondition'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'GeneralCondition'" [valueCollection]="conditionArray"></tab-multi-select>
 
-    <tab-multi-select [labelText]="'AirConditioner'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'AirConditioner'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'MagWheels'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'MagWheels'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Sunroof'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Sunroof'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Spotlights'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Spotlights'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Towbar'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Towbar'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'RunningBoards'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'RunningBoards'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Radio'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Radio'" [valueCollection]="radioArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'PaintCondition'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'AirConditioner'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'AirConditioner'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'MagWheels'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'MagWheels'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Sunroof'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Sunroof'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Spotlights'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Spotlights'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Towbar'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Towbar'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'RunningBoards'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'RunningBoards'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Radio'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Radio'" [valueCollection]="radioArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'PaintCondition'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
 
-    <tab-multi-select [labelText]="'CentralLocking'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'CentralLocking'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Immobiliser'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Immobiliser'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'BullBar'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'BullBar'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'BootSpoiler'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'BootSpoiler'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'CentralLocking'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'CentralLocking'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Immobiliser'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'Immobiliser'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'BullBar'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'BullBar'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'BootSpoiler'" [formGroupReference]="conditionFormGroup"
+        [formControlNameReferenceName]="'BootSpoiler'" [valueCollection]="conditionArray"></tab-multi-select>
 
     <div class="form-group">
         <label for="PaintColour">Paint Color</label>
@@ -76,4 +97,4 @@
         <label for="QuotesObtainedFrom">Quotes Obtained From</label>
         <input type="text" class="form-control" id="QuotesObtainedFrom" formControlName="QuotesObtainedFrom" />
     </div>
-</form>
+</div>
