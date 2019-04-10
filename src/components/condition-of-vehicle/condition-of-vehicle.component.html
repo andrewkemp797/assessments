@@ -1,79 +1,79 @@
 <form [formGroup]="conditionFormGroup">
     <div class="form-group">
         <label for="Odometer">Odometer</label>
-        <input type="number" id="Odometer" class="form-control" /> 
+        <input type="number" id="Odometer" class="form-control" formControlName="Odometer" /> 
     </div>
-    <tab-multi-select [labelText]="'Steering'" [formControlNameReference]="'Steering'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Footbrake'" [formControlNameReference]="'Footbrake'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Handbrake'" [formControlNameReference]="'Handbrake'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Bodywork'" [formControlNameReference]="'Bodywork'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Windscreen'" [formControlNameReference]="'Windscreen'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Chassis'" [formControlNameReference]="'Chassis'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Interior'" [formControlNameReference]="'Interior'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'PaintCondition'" [formControlNameReference]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'GeneralCondition'" [formControlNameReference]="'GeneralCondition'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Steering'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Steering'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Footbrake'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Footbrake'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Handbrake'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Handbrake'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Bodywork'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Bodywork'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Windscreen'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Windscreen'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Chassis'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Chassis'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Interior'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Interior'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'PaintCondition'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'GeneralCondition'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'GeneralCondition'" [valueCollection]="conditionArray"></tab-multi-select>
 
-    <tab-multi-select [labelText]="'AirConditioner'" [formControlNameReference]="'AirConditioner'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'MagWheels'" [formControlNameReference]="'MagWheels'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Sunroof'" [formControlNameReference]="'Sunroof'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Spotlights'" [formControlNameReference]="'Spotlights'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Towbar'" [formControlNameReference]="'Towbar'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'RunningBoards'" [formControlNameReference]="'RunningBoards'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Radio'" [formControlNameReference]="'Radio'" [valueCollection]="radioArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'PaintCondition'" [formControlNameReference]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'AirConditioner'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'AirConditioner'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'MagWheels'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'MagWheels'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Sunroof'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Sunroof'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Spotlights'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Spotlights'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Towbar'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Towbar'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'RunningBoards'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'RunningBoards'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Radio'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Radio'" [valueCollection]="radioArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'PaintCondition'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'PaintCondition'" [valueCollection]="conditionArray"></tab-multi-select>
 
-    <tab-multi-select [labelText]="'CentralLocking'" [formControlNameReference]="'CentralLocking'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'Immobiliser'" [formControlNameReference]="'Immobiliser'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'BullBar'" [formControlNameReference]="'BullBar'" [valueCollection]="conditionArray"></tab-multi-select>
-    <tab-multi-select [labelText]="'BootSpoiler'" [formControlNameReference]="'BootSpoiler'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'CentralLocking'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'CentralLocking'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'Immobiliser'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'Immobiliser'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'BullBar'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'BullBar'" [valueCollection]="conditionArray"></tab-multi-select>
+    <tab-multi-select [labelText]="'BootSpoiler'" [formGroupReference]="conditionFormGroup" [formControlNameReference]="'BootSpoiler'" [valueCollection]="conditionArray"></tab-multi-select>
 
     <div class="form-group">
-        <label for="">Paint Color</label>
-        <input type="text" class="form-control" id="PaintColour" [formControlName]="'PaintColour'" multiple />
+        <label for="PaintColour">Paint Color</label>
+        <input type="text" class="form-control" id="PaintColour" formControlName="PaintColour" />
     </div>
     <div class="form-group">
         <label for="MissingItems">Missing Items</label>
-        <input type="text" class="form-control" id="MissingItems" [formControlName]="'MissingItems'" />
+        <input type="text" class="form-control" id="MissingItems" formControlName="MissingItems" />
     </div>
     <div class="form-group">
         <label for="OldDamage">Old Damage</label>
-        <input type="text" class="form-control" id="OldDamage" [formControlName]="'OldDamage'" />
+        <input type="text" class="form-control" id="OldDamage" formControlName="OldDamage" />
     </div>
     <div class="form-group">
         <label for="Speakers">Speakers</label>
-        <input type="number" class="form-control" id="Speakers" [formControlName]="'Speakers'" />
+        <input type="number" class="form-control" id="Speakers" formControlName="Speakers" />
     </div>
 
     <div class="form-group">
         <label for="TyreMake">Tyre Make</label>
-        <input type="text" class="form-control" id="TyreMake" formControlName="'TyreMake'" />
+        <input type="text" class="form-control" id="TyreMake" formControlName="TyreMake" />
     </div>
     <div class="form-group">
         <label for="TyreThreadLF">Tyre Thread LF</label>
-        <input type="number" class="form-control" id="TyreThreadLF" formControlName="'TyreThreadLF'" />
+        <input type="number" class="form-control" id="TyreThreadLF" formControlName="TyreThreadLF" />
     </div>
     <div class="form-group">
         <label for="TyreThreadRF">Tyre Thread RF</label>
-        <input type="number" class="form-control" id="TyreThreadRF" formControlName="'TyreThreadRF'" />
+        <input type="number" class="form-control" id="TyreThreadRF" formControlName="TyreThreadRF" />
     </div>
     <div class="form-group">
         <label for="TyreThreadLR">Tyre Thread LR</label>
-        <input type="number" class="form-control" id="TyreThreadLR" formControlName="'TyreThreadLR'" />
+        <input type="number" class="form-control" id="TyreThreadLR" formControlName="TyreThreadLR" />
     </div>
     <div class="form-group">
         <label for="TyreThreadRR">Tyre Thread RR</label>
-        <input type="number" class="form-control" id="TyreThreadRR" formControlName="'TyreThreadRR'" />
+        <input type="number" class="form-control" id="TyreThreadRR" formControlName="TyreThreadRR" />
     </div>
     <div class="form-group">
         <label for="TyreThreadSpare">Tyre Thread Spare</label>
-        <input type="number" class="form-control" id="TyreThreadSpare" formControlName="'TyreThreadSpare'" />
+        <input type="number" class="form-control" id="TyreThreadSpare" formControlName="TyreThreadSpare" />
     </div>
     <div class="form-group">
         <label for="VehicleInspectedAt">Vehicle Inspected At</label>
-        <input type="text" class="form-control" id="VehicleInspectedAt" formControlName="'VehicleInspectedAt'" />
+        <input type="text" class="form-control" id="VehicleInspectedAt" formControlName="VehicleInspectedAt" />
     </div>
     <div class="form-group">
         <label for="QuotesObtainedFrom">Quotes Obtained From</label>
-        <input type="text" class="form-control" id="QuotesObtainedFrom" formControlName="'QuotesObtainedFrom'" />
+        <input type="text" class="form-control" id="QuotesObtainedFrom" formControlName="QuotesObtainedFrom" />
     </div>
 </form>

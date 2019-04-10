@@ -2,17 +2,17 @@
     <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0">
         <ngb-panel title="Motor Assessor Report">
             <ng-template ngbPanelContent>
-                <motor-assessor-report [motorAssessorReportFB]="assessmentDetails.motorAssessorReport"></motor-assessor-report>
+                <motor-assessor-report [motorAssessorReportFB]="assessmentDetails.controls['motorAssessorReport']"></motor-assessor-report>
             </ng-template>
         </ngb-panel>
         <ngb-panel title="Condition Of Vehicle">
             <ng-template ngbPanelContent>
-                <condition-of-vehicle [conditionFormGroup]="assessmentDetails.vehicleCondition"></condition-of-vehicle>
+                <condition-of-vehicle [conditionFormGroup]="assessmentDetails.controls['vehicleCondition']"></condition-of-vehicle>
             </ng-template>
         </ngb-panel>
         <ngb-panel title="Remarks">
             <ng-template ngbPanelContent>
-                <remarks [remarksFormGroup]="assessmentDetails.remarks"></remarks>
+                <remarks [remarksFormGroup]="assessmentDetails.controls['remarks']"></remarks>
             </ng-template>
         </ngb-panel>
     </ngb-accordion>

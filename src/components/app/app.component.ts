@@ -32,6 +32,7 @@ export class AppComponent {
   initializeFormGroup() {
     this.assessmentDetails = this.fb.group({
       motorAssessorReport: this.fb.group({
+        Insurance: [''],
         Client: [''],
         ClaimNo: [''],
         Vehicle: [''],
@@ -41,6 +42,7 @@ export class AppComponent {
         RegistrationNo: ['']
       }),
       vehicleCondition: this.fb.group({
+        Odometer: [0],
         Steering: [''],
         Footbrake: [''],
         Handbrake: [''],
@@ -75,8 +77,8 @@ export class AppComponent {
         QuotesObtainedFrom: [''],
       }),
       remarks: this.fb.group({
-        Remarks: ['']
+        remarks: ['']
       })
-    })
+    });
   }
 }

@@ -8,6 +8,7 @@ import { FormGroup } from '@angular/forms';
 })
 export class TabMultiSelectComponent implements OnInit {
 
+  @Input() formGroupReference: FormGroup;
   @Input() labelText: string;
   @Input() formControlNameReference: string;
   @Input() valueCollection: string[] = new Array();
