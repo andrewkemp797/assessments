@@ -12,11 +12,6 @@
                 <condition-of-vehicle [conditionFormGroup]="assessmentDetails.get('vehicleCondition')"></condition-of-vehicle>
             </ng-template>
         </ngb-panel>
-        <ngb-panel title="Remarks" id="remarks">
-            <ng-template ngbPanelContent>
-                <remarks [remarksFormGroup]="assessmentDetails.get('remarks')"></remarks>
-            </ng-template>
-        </ngb-panel>
         <ngb-panel title="Photos" id="photo">
             <ng-template ngbPanelContent>
                 <file-picker (photoStream)="receiveSelectedPhotos($event)"></file-picker>

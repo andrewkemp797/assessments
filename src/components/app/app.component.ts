@@ -3,7 +3,6 @@ import { SwUpdate } from '@angular/service-worker';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { MotorAssessorReport } from 'src/models/motorAssessorReport';
 import { VehicleCondition } from 'src/models/vehicleCondition';
-import { Remarks } from 'src/models/remarks';
 
 @Component({
   selector: 'app-root',
@@ -78,9 +77,7 @@ export class AppComponent {
         TyreThreadSpare: [0],
         VehicleInspectedAt: [''],
         QuotesObtainedFrom: [''],
-      }),
-      remarks: this.fb.group({
-        remarks: ['']
+        Remarks: ['']
       })
     });
   }
@@ -94,7 +91,6 @@ export class AppComponent {
 
     const motorAssessorReport = this.assessmentDetails.get('motorAssessorReport').value as MotorAssessorReport;
     const vehicleCondition = this.assessmentDetails.get('vehicleCondition').value as VehicleCondition;
-    const remarks = this.assessmentDetails.get('remarks').value as Remarks;
 
     if (this.assessmentDetails.valid) {
       //submit form to server

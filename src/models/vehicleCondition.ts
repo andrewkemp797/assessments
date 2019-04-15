@@ -35,4 +35,6 @@ export class VehicleCondition {
 
     public VehicleInspectedAt: string;
     public QuotesObtainedFrom: string;
+
+    public Remarks: string;
 }
