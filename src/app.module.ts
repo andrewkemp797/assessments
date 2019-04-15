@@ -11,7 +11,6 @@ import { LoginComponent } from './components/login/login.component';
 import { MotorAssessorReportComponent } from './components/motor-assessor-report/motor-assessor-report.component';
 import { ConditionOfVehicleComponent } from './components/condition-of-vehicle/condition-of-vehicle.component';
 import { RepairableComponent } from './components/repairable/repairable.component';
-import { RemarksComponent } from './components/remarks/remarks.component';
 import { TabMultiSelectComponent } from './components/singular-components/tab-multi-select/tab-multi-select.component';
 import { FilePickerComponent } from './components/singular-components/file-picker/file-picker.component';
 
@@ -22,7 +21,6 @@ import { FilePickerComponent } from './components/singular-components/file-picke
     MotorAssessorReportComponent,
     ConditionOfVehicleComponent,
     RepairableComponent,
-    RemarksComponent,
     TabMultiSelectComponent,
     FilePickerComponent
   ],
