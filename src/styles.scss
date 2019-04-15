@@ -1,1 +1,7 @@
-/* You can add global styles to this file, and also import other style files */
+.carousel {
+    .carousel-inner {
+        .carousel-item {
+            img { width: 100%;}
+        }
+    }
+}
