@@ -14,10 +14,10 @@ export class AppComponent {
 
   assessmentDetails: FormGroup;
   title = 'assessments';
+  photosArray: string[];
   valueCollection = ["Good", "Poor", "Write-Off"];
 
   constructor(private swUpdate: SwUpdate, private fb: FormBuilder) {
-
   }
 
   ngOnInit() {
@@ -83,6 +83,11 @@ export class AppComponent {
         remarks: ['']
       })
     });
+  }
+
+  receiveSelectedPhotos(photosArray: string[]) {
+    console.log('Photos Array:  ' + photosArray);
+    this.photosArray = photosArray;
   }
 
   public submitAssessment(): void {

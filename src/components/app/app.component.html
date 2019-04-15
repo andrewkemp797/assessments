@@ -17,6 +17,11 @@
                 <remarks [remarksFormGroup]="assessmentDetails.get('remarks')"></remarks>
             </ng-template>
         </ngb-panel>
+        <ngb-panel title="Photos">
+            <ng-template ngbPanelContent>
+                <file-picker (photoStream)="receiveSelectedPhotos($event)"></file-picker>
+            </ng-template>
+        </ngb-panel>
     </ngb-accordion>
 
     <button type="submit" class="btn btn-primary float-right">Submit</button>

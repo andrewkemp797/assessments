@@ -13,6 +13,7 @@ import { ConditionOfVehicleComponent } from './components/condition-of-vehicle/c
 import { RepairableComponent } from './components/repairable/repairable.component';
 import { RemarksComponent } from './components/remarks/remarks.component';
 import { TabMultiSelectComponent } from './components/singular-components/tab-multi-select/tab-multi-select.component';
+import { FilePickerComponent } from './components/singular-components/file-picker/file-picker.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { TabMultiSelectComponent } from './components/singular-components/tab-mu
     ConditionOfVehicleComponent,
     RepairableComponent,
     RemarksComponent,
-    TabMultiSelectComponent
+    TabMultiSelectComponent,
+    FilePickerComponent
   ],
   imports: [
     BrowserModule,

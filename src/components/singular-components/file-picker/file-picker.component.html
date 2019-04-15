@@ -1,0 +1,7 @@
+<input type="file" accept="image/*" multiple="multiple" (change)="onFilesSelected($event)" />
+
+<ngb-carousel *ngIf="photoArray">
+    <ng-template ngbSlide *ngFor="let imageString of photoArray">
+        <img [src]="imageString" alt="Random first slide">
+    </ng-template>
+</ngb-carousel>
