@@ -1,4 +1,5 @@
 export class VehicleCondition {
+    public Id: number;
     public Odometer: number;
     public Steering: string;
     public Footbrake: string;
@@ -37,4 +38,6 @@ export class VehicleCondition {
     public QuotesObtainedFrom: string;
 
     public Remarks: string;
+
+    public MotorAssessorReport_Id: string;
 }
