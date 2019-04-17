@@ -10,8 +10,8 @@ export class ConditionOfVehicleComponent implements OnInit {
 
   @Input() conditionFormGroup: FormGroup;
   public conditionArray = ["Good", "Fair", "Poor"];
-  public yesNoArray = ["Yes", "No"];
-  public radioArray = ["Factory Fitted", "Custom", "None"];
+  public yesNoArray = [true, false];
+  public radioArray = ["Factory Fitted", "After Market"];
 
   constructor() { }
 

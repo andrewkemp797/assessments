@@ -1,4 +1,7 @@
+import { MotorAssessorReport } from './motorAssessorReport';
+
 export class VehicleCondition {
+    public Id: number;
     public Odometer: number;
     public Steering: string;
     public Footbrake: string;
@@ -10,18 +13,18 @@ export class VehicleCondition {
     public PaintCondition: string;
     public PaintColour: string;
 
-    public AirConditioner: boolean;
-    public MagWheels: boolean;
-    public Sunroof: boolean;
-    public Spotlights: boolean;
-    public Towbar: boolean;
-    public RunningBoards: boolean;
+    public AirConditioner: string;
+    public MagWheels: string;
+    public Sunroof: string;
+    public Spotlights: string;
+    public Towbar: string;
+    public RunningBoards: string;
     public Radio: string;
-    public Speakers: number;
-    public CentralLocking: boolean;
-    public Immobiliser: boolean;
-    public BullBar: boolean;
-    public BootSpoiler: boolean;
+    public Speakers: string;
+    public CentralLocking: string;
+    public Immobiliser: string;
+    public BullBar: string;
+    public BootSpoiler: string;
 
     public GeneralCondition: string;
     public MissingItems: string;
@@ -37,4 +40,7 @@ export class VehicleCondition {
     public QuotesObtainedFrom: string;
 
     public Remarks: string;
+    public IsRetired: boolean;
+
+    public MotorAssessorReport: MotorAssessorReport;
 }

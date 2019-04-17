@@ -3,6 +3,7 @@ import { SwUpdate } from '@angular/service-worker';
 import { FormGroup, FormBuilder } from '@angular/forms';
 import { MotorAssessorReport } from 'src/models/motorAssessorReport';
 import { VehicleCondition } from 'src/models/vehicleCondition';
+import { AssessmentService } from 'src/services/assessment.service';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,9 @@ export class AppComponent {
   photosArray: string[];
   valueCollection = ["Good", "Poor", "Write-Off"];
 
-  constructor(private swUpdate: SwUpdate, private fb: FormBuilder) {
+  constructor(private swUpdate: SwUpdate, 
+    private assessmentService: AssessmentService,
+    private fb: FormBuilder) {
   }
 
   ngOnInit() {
@@ -92,8 +95,11 @@ export class AppComponent {
     const motorAssessorReport = this.assessmentDetails.get('motorAssessorReport').value as MotorAssessorReport;
     const vehicleCondition = this.assessmentDetails.get('vehicleCondition').value as VehicleCondition;
 
+    //bad...Need to change this:
+    motorAssessorReport.VehicleCondition = vehicleCondition;
+
     if (this.assessmentDetails.valid) {
-      //submit form to server
+      this.assessmentService.addAssessment(motorAssessorReport);
     }
   }
 }
