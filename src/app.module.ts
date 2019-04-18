@@ -14,6 +14,8 @@ import { ConditionOfVehicleComponent } from './components/condition-of-vehicle/c
 import { RepairableComponent } from './components/repairable/repairable.component';
 import { TabMultiSelectComponent } from './components/singular-components/tab-multi-select/tab-multi-select.component';
 import { FilePickerComponent } from './components/singular-components/file-picker/file-picker.component';
+import { AssessmentListingComponent } from './components/assessments/assessment-listing/assessment-listing.component';
+import { AssessmentCaptureComponent } from './components/assessments/assessment-capture/assessment-capture.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { FilePickerComponent } from './components/singular-components/file-picke
     ConditionOfVehicleComponent,
     RepairableComponent,
     TabMultiSelectComponent,
-    FilePickerComponent
+    FilePickerComponent,
+    AssessmentListingComponent,
+    AssessmentCaptureComponent
   ],
   imports: [
     BrowserModule,

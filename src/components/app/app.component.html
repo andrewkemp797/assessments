@@ -1,23 +1,4 @@
-<h1>Assessment Capture</h1>
+<!-- Need to put static shit here... -->
 
-<form [formGroup]="assessmentDetails" (ngSubmit)="submitAssessment()">
-    <ngb-accordion [closeOthers]="true" #acc="ngbAccordion">
-        <ngb-panel title="Motor Assessor Report" id="report">
-            <ng-template ngbPanelContent>
-                <motor-assessor-report [motorAssessorReportFB]="assessmentDetails.get('motorAssessorReport')"></motor-assessor-report>
-            </ng-template>
-        </ngb-panel>
-        <ngb-panel title="Condition Of Vehicle" id="condition">
-            <ng-template ngbPanelContent>
-                <condition-of-vehicle [conditionFormGroup]="assessmentDetails.get('vehicleCondition')"></condition-of-vehicle>
-            </ng-template>
-        </ngb-panel>
-        <ngb-panel title="Photos" id="photo">
-            <ng-template ngbPanelContent>
-                <file-picker (photoStream)="receiveSelectedPhotos($event)"></file-picker>
-            </ng-template>
-        </ngb-panel>
-    </ngb-accordion>
-
-    <button type="submit" class="btn btn-primary float-right">Submit</button>
-</form>
+<!-- Replace below with router-outlet -->
+<assessment-listing></assessment-listing>

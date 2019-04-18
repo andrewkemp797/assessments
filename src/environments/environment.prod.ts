@@ -3,7 +3,9 @@ export const environment = {
   endPoints: {
     assessment: {
       base: "http://localhost:7071/api/",
-      addAssessment: "Assessment/AddAssessment"
+      addAssessment: "assessment/add",
+      listAll: "assessment/all",
+      assessmentById: "assessment/id/"
     }
   }
 };
