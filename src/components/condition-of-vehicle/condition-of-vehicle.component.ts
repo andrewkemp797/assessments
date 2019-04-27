@@ -17,5 +17,4 @@ export class ConditionOfVehicleComponent implements OnInit {
 
   ngOnInit() {
   }
-
 }

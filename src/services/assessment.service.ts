@@ -26,6 +26,8 @@ export class AssessmentService {
   }
 
   getAssessmentById(id: number): Observable<MotorAssessorReport> {
-    return this.httpClient.get<MotorAssessorReport>(environment.endPoints.assessment.base + environment.endPoints.assessment.assessmentById + id.toString());
+    const url = environment.endPoints.assessment.base + 
+      environment.endPoints.assessment.assessmentById + id;
+    return this.httpClient.get<MotorAssessorReport>(url);
   }
 }

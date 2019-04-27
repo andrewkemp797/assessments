@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AssessmentService } from 'src/services/assessment.service';
 import { MotorAssessorReport } from 'src/models/motorAssessorReport';
+import { take } from 'rxjs/operators';
 
 @Component({
   selector: 'assessment-listing',
@@ -19,6 +20,7 @@ export class AssessmentListingComponent implements OnInit {
 
   subscribeToAssessments() {
     this.assessmentService.listAssessments()
+      .pipe(take(1))
       .subscribe(x => {
         this.assessmentCollection = x;
       });
