@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFontAwesomeModule } from 'angular-font-awesome';
 
 import { AppRoutingModule } from './router/app-routing.module';
 import { AppComponent } from './components/app/app.component';
@@ -36,6 +37,7 @@ import { AssessmentCaptureComponent } from './components/assessments/assessment-
     NgbModule,
     FormsModule,
     ReactiveFormsModule,
+    AngularFontAwesomeModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
