@@ -2,8 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AssessmentListingComponent } from 'src/components/assessments/assessment-listing/assessment-listing.component';
 import { AssessmentCaptureComponent } from 'src/components/assessments/assessment-capture/assessment-capture.component';
+import { LoginComponent } from 'src/components/login/login.component';
 
 const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent
+  },
   {
     path: 'listing',
     component: AssessmentListingComponent
@@ -18,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/listing',
+    redirectTo: '/login',
     pathMatch: 'full'
   },
   // {

@@ -1,5 +1,8 @@
 <h1>Captures</h1>
 
 <ul class="list-group list-group-flush" *ngFor="let assessment of assessmentCollection">
-    <li class="list-group-item list-group-item-action" [routerLink]="['/assessment', assessment.Id]">{{assessment.Client + " - " + assessment.Vehicle}}</li>
+    <li class="list-group-item list-group-item-action" [routerLink]="['/assessment', assessment.Id]">
+        <i class="fa fa-clipboard"></i>
+        {{assessment.Client + " - " + assessment.Vehicle}}
+    </li>
 </ul>
