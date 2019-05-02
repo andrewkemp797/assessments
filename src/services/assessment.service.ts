@@ -14,20 +14,15 @@ export class AssessmentService {
   constructor(private httpClient: HttpClient) { }
 
   addAssessment(motorAssessorReport: MotorAssessorReport): void {
-    const url = environment.endPoints.assessment.base + environment.endPoints.assessment.addAssessment;
-
-    this.httpClient.post<string>(url, motorAssessorReport)
-      .pipe(tap(x => console.log("Posted Assessment Response: " + x)))
+    this.httpClient.post<string>(environment.endPoints.assessment.addAssessment(), motorAssessorReport)
       .subscribe();
   }
 
   listAssessments(): Observable<MotorAssessorReport[]> {
-    return this.httpClient.get<MotorAssessorReport[]>(environment.endPoints.assessment.base + environment.endPoints.assessment.listAll);
+    return this.httpClient.get<MotorAssessorReport[]>(environment.endPoints.assessment.listAll());
   }
 
   getAssessmentById(id: number): Observable<MotorAssessorReport> {
-    const url = environment.endPoints.assessment.base + 
-      environment.endPoints.assessment.assessmentById + id;
-    return this.httpClient.get<MotorAssessorReport>(url);
+    return this.httpClient.get<MotorAssessorReport>(environment.endPoints.assessment.assessmentById(id));
   }
 }

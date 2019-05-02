@@ -7,9 +7,9 @@ export const environment = {
   endPoints: {
     assessment: {
       base: "http://localhost:7071/api/",
-      addAssessment: "assessment/add",
-      listAll: "assessment/all",
-      assessmentById: "assessment/id/"
+      addAssessment() { return this.base + "assessment/add"},
+      listAll() { return this.base + "assessment/all" },
+      assessmentById(assessmentId: number) { return this.base + `assessment/id/${assessmentId}`; }
     }
   }
 };
