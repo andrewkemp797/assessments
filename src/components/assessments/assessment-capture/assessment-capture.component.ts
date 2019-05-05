@@ -17,7 +17,7 @@ export class AssessmentCaptureComponent implements OnInit {
   assessmentId: number;
   assessment: MotorAssessorReport;
   assessmentDetailsFormGroup: FormGroup;
-  photosArray: string[];
+  photos: string[] = [];
 
   constructor(
     private assessmentService: AssessmentService,
@@ -39,61 +39,9 @@ export class AssessmentCaptureComponent implements OnInit {
       motorAssessorReport: this.fb.group(new MotorAssessorReport()),
       vehicleCondition: this.fb.group(new VehicleCondition())
     });
-    // this.assessmentDetailsFormGroup = this.fb.group({
-    //   motorAssessorReport: this.fb.group({
-    //     Insurance: ['', Validators.required],
-    //     Client: ['', Validators.required],
-    //     ClaimNo: [''],
-    //     Vehicle: ['', Validators.required],
-    //     DateInspected: [Date.now()],
-    //     EngineNo: [''],
-    //     ChassisNo: [''],
-    //     RegistrationNo: ['', Validators.required]
-    //   }),
-    //   vehicleCondition: this.fb.group({
-    //     Odometer: [0],
-    //     Steering: [''],
-    //     Footbrake: [''],
-    //     Handbrake: [''],
-    //     Bodywork: [''],
-    //     Windscreen: [''],
-    //     Chassis: [''],
-    //     Interior: [''],
-    //     PaintCondition: [''],
-    //     PaintColour: [''],
-    //     AirConditioner: [''],
-    //     MagWheels: [true],
-    //     Sunroof: [true],
-    //     Spotlights: [true],
-    //     Towbar: [true],
-    //     RunningBoards: [true],
-    //     Radio: [true],
-    //     Speakers: [0],
-    //     CentralLocking: [true],
-    //     Immobiliser: [true],
-    //     BullBar: [true],
-    //     BootSpoiler: [true],
-    //     GeneralCondition: [''],
-    //     MissingItems: [''],
-    //     OldDamage: [''],
-    //     TyreMake: [''],
-    //     TyreThreadLF: [0],
-    //     TyreThreadRF: [0],
-    //     TyreThreadLR: [0],
-    //     TyreThreadRR: [0],
-    //     TyreThreadSpare: [0],
-    //     VehicleInspectedAt: [''],
-    //     QuotesObtainedFrom: [''],
-    //     Remarks: ['']
-    //   })
-    // });
   }
 
   initializeEditFormGroup() {
-    // this.assessmentDetailsFormGroup = this.fb.group({
-    //   motorAssessorReport: this.fb.group(this.assessment),
-    //   vehicleCondition: this.fb.group(this.assessment.VehicleCondition)
-    // });
     this.assessmentDetailsFormGroup.get('motorAssessorReport.Insurance').patchValue(this.assessment.Insurance);
     this.assessmentDetailsFormGroup.get('motorAssessorReport.Client').patchValue(this.assessment.Client);
     this.assessmentDetailsFormGroup.get('motorAssessorReport.ClaimNo').patchValue(this.assessment.ClaimNo);
@@ -152,18 +100,18 @@ export class AssessmentCaptureComponent implements OnInit {
   }
 
   receiveSelectedPhotos(photosArray: string[]) {
-    this.photosArray = photosArray;
+    this.photos = photosArray;
   }
 
   public submitAssessment(): void {
     const value = this.assessmentDetailsFormGroup.value;
 
     //Need to do a deep copy of object, to prevent weird behaviour if objects get modified down the line
-    const motorAssessorReport = Object.assign({}, value['motorAssessorReport']);
-    const vehicleCondition = Object.assign({}, value['vehicleCondition']);
+    const motorAssessorReport = Object.assign({}, value['motorAssessorReport']) as MotorAssessorReport;
+    const vehicleCondition = Object.assign({}, value['vehicleCondition']) as VehicleCondition;
 
-    // bad...Need to change this:
     motorAssessorReport.VehicleCondition = vehicleCondition;
+    motorAssessorReport.Photos = this.photos;
 
     if (this.assessmentDetailsFormGroup.valid) {
       this.assessmentService.addAssessment(motorAssessorReport);

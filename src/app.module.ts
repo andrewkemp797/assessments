@@ -38,7 +38,7 @@ import { AssessmentCaptureComponent } from './components/assessments/assessment-
     FormsModule,
     ReactiveFormsModule,
     AngularFontAwesomeModule,
-    ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production })
+    ServiceWorkerModule.register('./ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [],
   bootstrap: [AppComponent]

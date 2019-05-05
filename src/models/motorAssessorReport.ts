@@ -1,4 +1,5 @@
 import { VehicleCondition } from './vehicleCondition';
+import { Photo } from './photo';
 
 export class MotorAssessorReport {
     public Id: number = 0;
@@ -13,4 +14,5 @@ export class MotorAssessorReport {
     public IsRetired: boolean = false;
 
     public VehicleCondition: VehicleCondition;
+    public Photos: Photo[];
 }

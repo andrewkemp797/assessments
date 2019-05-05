@@ -1,4 +1,3 @@
-<i class="fa fa-arrow-left"></i>
 <h1>Assessment Capture</h1>
 
 <form [formGroup]="assessmentDetailsFormGroup" (ngSubmit)="submitAssessment()">
@@ -15,7 +14,7 @@
         </ngb-panel>
         <ngb-panel title="Photos" id="photo">
             <ng-template ngbPanelContent>
-                <file-picker (photoStream)="receiveSelectedPhotos($event)"></file-picker>
+                <file-picker (photoStream)="receiveSelectedPhotos($event)" [photoArray]="photos"></file-picker>
             </ng-template>
         </ngb-panel>
     </ngb-accordion>

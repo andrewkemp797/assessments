@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'file-picker',
@@ -6,7 +6,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./file-picker.component.scss']
 })
 export class FilePickerComponent implements OnInit {
-  photoArray: string[] = new Array();
+  @Input() photoArray: string[] = new Array();
   @Output() photoStream: EventEmitter<string[]> = new EventEmitter();
 
   constructor() { }
@@ -19,9 +19,7 @@ export class FilePickerComponent implements OnInit {
      for (let file of event.target.files) {
        const reader = new FileReader();
        reader.onload = () => {
-         console.log('Reached onload in file picker....'+file);
          const imageFile = reader.result as string;
-         console.log(imageFile);
          this.photoArray.push(imageFile);
        }
        reader.readAsDataURL(file);
