@@ -6,6 +6,7 @@ import { VehicleCondition } from 'src/models/vehicleCondition';
 import { AssessmentService } from 'src/services/assessment.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { take } from 'rxjs/operators';
+import { Photo } from 'src/models/photo';
 
 @Component({
   selector: 'assessment-capture',
@@ -42,6 +43,14 @@ export class AssessmentCaptureComponent implements OnInit {
   }
 
   initializeEditFormGroup() {
+
+    if (this.assessment.Photos) {
+      this.assessment.Photos.forEach(x => {
+        console.log(x.PhotoBase64);
+        this.photos.push(x.PhotoBase64);
+      })
+    }
+
     this.assessmentDetailsFormGroup.get('motorAssessorReport.Insurance').patchValue(this.assessment.Insurance);
     this.assessmentDetailsFormGroup.get('motorAssessorReport.Client').patchValue(this.assessment.Client);
     this.assessmentDetailsFormGroup.get('motorAssessorReport.ClaimNo').patchValue(this.assessment.ClaimNo);
@@ -93,6 +102,7 @@ export class AssessmentCaptureComponent implements OnInit {
       .subscribe(
       x => { 
         this.assessment = x;
+        console.log(x);
       },
       error => {},
       () => { this.initializeEditFormGroup(); }
@@ -111,12 +121,19 @@ export class AssessmentCaptureComponent implements OnInit {
     const vehicleCondition = Object.assign({}, value['vehicleCondition']) as VehicleCondition;
 
     motorAssessorReport.VehicleCondition = vehicleCondition;
-    motorAssessorReport.Photos = this.photos;
+    motorAssessorReport.Photos = this.photos
+      .map(x => Object.assign(new Photo, 
+        { 
+          Id: motorAssessorReport.Id, 
+          PhotoBase64: x, 
+          MotorAssessorReportId: motorAssessorReport.Id 
+        }
+      ));
 
     if (this.assessmentDetailsFormGroup.valid) {
       this.assessmentService.addAssessment(motorAssessorReport);
     }
 
-    this.router.navigate(['/list']);
+    this.router.navigate(['/listing']);
   }
 }
